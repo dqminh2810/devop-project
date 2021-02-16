@@ -4,7 +4,7 @@ public class UserTest {
     User user;
     @org.junit.Before
     public void setUp() throws Exception {
-        user = new User("test name");
+        user = new User("test name", 18);
     }
 
     @org.junit.After
@@ -15,8 +15,13 @@ public class UserTest {
     @org.junit.Test
     public void getName() {
         assertEquals("test name", user.getName());
+        assertEquals(18, user.getAge());
         user.setName("minh");
         assertEquals("minh", user.getName());
+    }
+    @org.junit.Test
+    public void getAge() {
+        assertEquals(18, user.getAge());
     }
 
     @org.junit.Test
