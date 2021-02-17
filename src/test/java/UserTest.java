@@ -21,6 +21,9 @@ public class UserTest {
     @org.junit.Test
     public void getAge() {
         assertEquals(18, user.getAge());
+        user.setAge(24);
+        assertEquals(24, user.getAge());
+
     }
 
     @org.junit.Test
