@@ -3,10 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>devops-project</groupId>
     <artifactId>devops-project</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>DEVOPS :: project</name>
 
@@ -14,6 +13,13 @@
         <!-- General Properties -->
         <versions.java>1.8</versions.java>
         <versions.junit>4.12</versions.junit>
+        <!-- Artifactory configuration parameters -->
+        <artifactory.repository.snapshot.url>http://localhost:8081/artifactory/libs-snapshot-local</artifactory.repository.snapshot.url>
+        <artifactory.repository.release.url>http://localhost:8081/artifactory/libs-release-local</artifactory.repository.release.url>
+        <artifactory.snapshots.id>snapshots</artifactory.snapshots.id>
+        <artifactory.releases.id>central</artifactory.releases.id>
+        <artifactory.snapshots.name>DESKTOP-AESDG6H-snapshots</artifactory.snapshots.name>
+        <artifactory.releases.name>DESKTOP-AESDG6H-releases</artifactory.releases.name>
     </properties>
     <dependencies>
         <dependency>
@@ -24,8 +30,22 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>${artifactory.snapshots.id}</id>
+            <name>${artifactory.snapshots.name}</name>
+            <url>${artifactory.repository.snapshot.url}</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <finalName>devops-project</finalName>
         <defaultGoal>package</defaultGoal>
     </build>
+
+    <modules>
+        <module>ModuleA</module>
+        <module>ModuleB</module>
+        <module>ModuleC</module>
+    </modules>
 </project>
