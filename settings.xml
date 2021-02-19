@@ -24,13 +24,13 @@
                     </snapshots>
                     <id>central</id>
                     <name>DESKTOP-AESDG6H-release</name>
-                    <url>http://localhost:8081/artifactory/libs-release-local</url>
+                    <url>http://localhost:8082/artifactory/libs-release-local</url>
                 </repository>
                 <repository>
                     <snapshots />
                     <id>snapshots</id>
                     <name>DESKTOP-AESDG6H-snapshots</name>
-                    <url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+                    <url>http://localhost:8082/artifactory/libs-snapshot-local</url>
                 </repository>
             </repositories>
             <pluginRepositories>
@@ -40,13 +40,13 @@
                     </snapshots>
                     <id>central</id>
                     <name>DESKTOP-AESDG6H-release</name>
-                    <url>http://localhost:8081/artifactory/libs-release-local</url>
+                    <url>http://localhost:8082/artifactory/libs-release-local</url>
                 </pluginRepository>
                 <pluginRepository>
                     <snapshots />
                     <id>snapshots</id>
                     <name>DESKTOP-AESDG6H-snapshots</name>
-                    <url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+                    <url>http://localhost:8082/artifactory/libs-snapshot-local</url>
                 </pluginRepository>
             </pluginRepositories>
             <id>artifactory</id>
