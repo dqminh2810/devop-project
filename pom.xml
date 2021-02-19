@@ -15,7 +15,7 @@
         <versions.junit>4.12</versions.junit>
         <!-- Artifactory configuration parameters -->
         <artifactory.repository.snapshot.url>http://localhost:8082/artifactory/libs-snapshot-local</artifactory.repository.snapshot.url>
-        <artifactory.repository.release.url>http://localhost:8082/artifactory/libs-release-local</artifactory.repository.release.url>
+        <artifactory.repository.releases.url>http://localhost:8082/artifactory/libs-release-local</artifactory.repository.releases.url>
         <artifactory.snapshots.id>snapshots</artifactory.snapshots.id>
         <artifactory.releases.id>central</artifactory.releases.id>
         <artifactory.snapshots.name>DESKTOP-AESDG6H-snapshots</artifactory.snapshots.name>
@@ -32,9 +32,9 @@
 
     <distributionManagement>
         <repository>
-            <id>${artifactory.snapshots.id}</id>
-            <name>${artifactory.snapshots.name}</name>
-            <url>${artifactory.repository.release.url}</url>
+            <id>${artifactory.releases.id}</id>
+            <name>${artifactory.releases.name}</name>
+            <url>${artifactory.repository.releases.url}</url>
         </repository>
     </distributionManagement>
 
